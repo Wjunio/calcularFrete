@@ -39,8 +39,8 @@ public class CepController {
 	// definidas na classe model.
 	@ApiResponses({
 		@ApiResponse(code = 200, message = "Solicitacao da consulta do cep realizada com sucesso", response = CepResponse.class),
-		@ApiResponse(code = 202, message = "Solicitacao da consulta do cep realizada, CEP não encontrado."),
 		@ApiResponse(code = 400, message = "Informacoes enviadas na requisicao sao invalidas", response = ResponseError.class),
+		@ApiResponse(code = 404, message = "Solicitacao da consulta do cep realizada, CEP não encontrado."),
 		@ApiResponse(code = 412, message = "Requisicao de participante que viola alguma regra de negocio da aplicacao.", response = ResponseError.class),
 		@ApiResponse(code = 500, message = "Servico nao esta disponivel no momento. Serviço solicitado pode estar em manutencao ou fora da janela de funcionamento.", response = ResponseError.class)
 	})
